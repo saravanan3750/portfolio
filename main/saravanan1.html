@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiru Sara | ePub Accessibility Specialist</title>
+    <meta name="description" content="WCAG-compliant ePub accessibility services for inclusive digital publishing">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* (Previous CSS styles remain the same) */
+        
+        /* New Components */
+        
+        /* Box Component */
+        .box {
+            background: var(--darker);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 1rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 1px solid rgba(108, 99, 255, 0.2);
+            transition: var(--transition);
+        }
+        
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            border-color: var(--primary);
+        }
+        
+        .box-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .box-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: rgba(108, 99, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        .box-title {
+            font-size: 1.5rem;
+            color: var(--lighter);
+        }
+        
+        /* Carousel Component */
+        .carousel-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            padding: 1rem 0;
+        }
+        
+        .carousel-item {
+            min-width: 300px;
+            padding: 0 1rem;
+        }
+        
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            gap: 1rem;
+        }
+        
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .carousel-dot.active {
+            background: var(--primary);
+            transform: scale(1.2);
+        }
+        
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(108, 99, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+        }
+        
+        .carousel-arrow:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .carousel-arrow.prev {
+            left: 1rem;
+        }
+        
+        .carousel-arrow.next {
+            right: 1rem;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 6rem 2rem;
+            background-color: var(--dark);
+        }
+        
+        .testimonial-card {
+            background: var(--darker);
+            padding: 2rem;
+            border-radius: 12px;
+            position: relative;
+            margin: 0 1rem;
+        }
+        
+        .testimonial-quote {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .testimonial-quote::before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: -1.5rem;
+            left: -1rem;
+            color: rgba(108, 99, 255, 0.2);
+            line-height: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+        
+        .testimonial-author-info h4 {
+            color: var(--lighter);
+            margin-bottom: 0.2rem;
+        }
+        
+        .testimonial-author-info p {
+            color: var(--light);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Services Section */
+        .services-section {
+            padding: 6rem 2rem;
+            background-color: var(--darker);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to Content Link (Accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Hero Banner Section -->
+    <header id="home">
+        <!-- (Previous header content remains the same) -->
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- About Me Section -->
+        <section id="about" class="about-section animate-on-scroll">
+            <!-- (Previous about content remains the same) -->
+        </section>
+
+        <!-- Services Boxes Section -->
+        <section id="services" class="services-section animate-on-scroll">
+            <h2 class="section-title">My Services</h2>
+            <div class="services-grid">
+                <div class="box">
+                    <div class="box-header">
+                        <div class="box-icon">
+                            <i class="fas fa-universal-access"></i>
+                        </div>
+                        <h3 class="box-title">ePub Accessibility</h3>
+                    </div>
+                    <p>WCAG-compliant ePub conversion and remediation services to ensure your digital publications meet accessibility standards.</p>
+                </div>
+                
+                <div class="box">
+                    <div class="box-header">
+                        <div class="box-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3 class="box-title">Fixed Layout ePub</h3>
+                    </div>
+                    <p>Creation of accessible fixed layout ePubs that maintain your book's design while being fully navigable.</p>
+                </div>
+                
+                <div class="box">
+                    <div class="box-header">
+                        <div class="box-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3 class="box-title">Training</h3>
+                    </div>
+                    <p>Comprehensive training for your team on ePub accessibility best practices and WCAG guidelines.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section id="experience" class="experience-section animate-on-scroll">
+            <!-- (Previous timeline content remains the same) -->
+        </section>
+
+        <!-- Projects Carousel Section -->
+        <section id="projects" class="projects-section animate-on-scroll">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="carousel-container">
+                <button class="carousel-arrow prev" aria-label="Previous project">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Educational Textbook with mathematical equations">
+                                <span class="project-tag">WCAG 2.1 AA</span>
+                            </div>
+                            <div class="project-info">
+                                <h3>STEM Textbook Accessibility</h3>
+                                <p>Comprehensive accessibility remediation for university-level mathematics textbook with complex equations and diagrams.</p>
+                                <div class="project-links">
+                                    <a href="#" class="project-link project-link-primary">
+                                        <i class="fas fa-info-circle" aria-hidden="true"></i> Case Study
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Open novel showing text and chapter headings">
+                                <span class="project-tag">EPUB 3</span>
+                            </div>
+                            <div class="project-info">
+                                <h3>Bestselling Novel Series</h3>
+                                <p>Accessible conversion of popular fiction series with enhanced navigation and screen reader optimization.</p>
+                                <div class="project-links">
+                                    <a href="#" class="project-link project-link-primary">
+                                        <i class="fas fa-info-circle" aria-hidden="true"></i> Case Study
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Colorful children's book with illustrations">
+                                <span class="project-tag">Read-Aloud</span>
+                            </div>
+                            <div class="project-info">
+                                <h3>Interactive Children's Books</h3>
+                                <p>Developed accessible, interactive children's books with synchronized text highlighting and audio descriptions.</p>
+                                <div class="project-links">
+                                    <a href="#" class="project-link project-link-primary">
+                                        <i class="fas fa-info-circle" aria-hidden="true"></i> Case Study
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Academic journal">
+                                <span class="project-tag">EPUB 3</span>
+                            </div>
+                            <div class="project-info">
+                                <h3>Academic Journal Collection</h3>
+                                <p>Accessible conversion of a 50-volume academic journal collection with complex footnotes and references.</p>
+                                <div class="project-links">
+                                    <a href="#" class="project-link project-link-primary">
+                                        <i class="fas fa-info-circle" aria-hidden="true"></i> Case Study
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                
+                <button class="carousel-arrow next" aria-label="Next project">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-nav">
+                    <div class="carousel-dot active" data-index="0"></div>
+                    <div class="carousel-dot" data-index="1"></div>
+                    <div class="carousel-dot" data-index="2"></div>
+                    <div class="carousel-dot" data-index="3"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Carousel Section -->
+        <section id="testimonials" class="testimonials-section animate-on-scroll">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">Thiru transformed our textbook series into fully accessible EPUBs that exceeded our expectations. His attention to detail and deep understanding of WCAG guidelines was impressive.</p>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson" class="testimonial-author-img">
+                                <div class="testimonial-author-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <p>Publishing Director, Academic Press</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">We worked with Thiru on making our children's book series accessible. He not only delivered excellent technical work but also provided valuable insights on improving the reading experience for all children.</p>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="testimonial-author-img">
+                                <div class="testimonial-author-info">
+                                    <h4>Michael Chen</h4>
+                                    <p>CEO, StoryTime Publishing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">As an accessibility consultant, I frequently recommend Thiru to my clients. His EPUB work is consistently excellent and he's my go-to specialist for complex accessibility challenges.</p>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Emma Rodriguez" class="testimonial-author-img">
+                                <div class="testimonial-author-info">
+                                    <h4>Dr. Emma Rodriguez</h4>
+                                    <p>Accessibility Consultant</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-nav">
+                    <div class="carousel-dot active" data-index="0"></div>
+                    <div class="carousel-dot" data-index="1"></div>
+                    <div class="carousel-dot" data-index="2"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="contact-section animate-on-scroll">
+            <!-- (Previous contact content remains the same) -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- (Previous footer content remains the same) -->
+    </footer>
+
+    <script>
+        // (Previous JavaScript remains the same)
+        
+        // Carousel Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Projects Carousel
+            const projectsCarousel = document.querySelector('#projects .carousel');
+            const projectItems = document.querySelectorAll('#projects .carousel-item');
+            const projectDots = document.querySelectorAll('#projects .carousel-dot');
+            const projectPrevBtn = document.querySelector('#projects .prev');
+            const projectNextBtn = document.querySelector('#projects .next');
+            
+            let projectCurrentIndex = 0;
+            const projectItemWidth = 300; // Width + margin of each item
+            
+            function updateProjectsCarousel() {
+                projectsCarousel.style.transform = `translateX(-${projectCurrentIndex * projectItemWidth}px)`;
+                
+                projectDots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === projectCurrentIndex);
+                });
+            }
+            
+            projectDots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    projectCurrentIndex = parseInt(this.getAttribute('data-index'));
+                    updateProjectsCarousel();
+                });
+            });
+            
+            projectPrevBtn.addEventListener('click', function() {
+                projectCurrentIndex = Math.max(0, projectCurrentIndex - 1);
+                updateProjectsCarousel();
+            });
+            
+            projectNextBtn.addEventListener('click', function() {
+                projectCurrentIndex = Math.min(projectItems.length - 1, projectCurrentIndex + 1);
+                updateProjectsCarousel();
+            });
+            
+            // Testimonials Carousel
+            const testimonialsCarousel = document.querySelector('#testimonials .carousel');
+            const testimonialItems = document.querySelectorAll('#testimonials .carousel-item');
+            const testimonialDots = document.querySelectorAll('#testimonials .carousel-dot');
+            
+            let testimonialCurrentIndex = 0;
+            const testimonialItemWidth = testimonialItems[0].offsetWidth;
+            
+            function updateTestimonialsCarousel() {
+                testimonialsCarousel.style.transform = `translateX(-${testimonialCurrentIndex * testimonialItemWidth}px)`;
+                
+                testimonialDots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === testimonialCurrentIndex);
+                });
+            }
+            
+            testimonialDots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    testimonialCurrentIndex = parseInt(this.getAttribute('data-index'));
+                    updateTestimonialsCarousel();
+                });
+            });
+            
+            // Auto-rotate testimonials
+            setInterval(() => {
+                testimonialCurrentIndex = (testimonialCurrentIndex + 1) % testimonialItems.length;
+                updateTestimonialsCarousel();
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
